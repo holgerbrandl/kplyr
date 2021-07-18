@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MicroBenchmark - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl.util</a>&nbsp;/&nbsp;<a href="./index.html">MicroBenchmark</a><br/>
+<br/>
+<h1>MicroBenchmark</h1>
+<code><span class="keyword">class </span><span class="identifier">MicroBenchmark</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p><strong>Author</strong><br/>
+Holger Brandl</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">MicroBenchmark</span><span class="symbol">(</span><span class="identifier" id="krangl.util.MicroBenchmark$<init>(kotlin.Int, kotlin.Int)/reps">reps</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;25<span class="symbol">, </span><span class="identifier" id="krangl.util.MicroBenchmark$<init>(kotlin.Int, kotlin.Int)/warmupReps">warmupReps</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="reps.html">reps</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reps</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="results.html">results</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">results</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../-benchmark-result/index.html"><span class="identifier">BenchmarkResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="warmup-reps.html">warmupReps</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">warmupReps</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="elapse-nano.html">elapseNano</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">elapseNano</span><span class="symbol">(</span><span class="identifier" id="krangl.util.MicroBenchmark$elapseNano(krangl.util.MicroBenchmark.T, kotlin.Function0((kotlin.Unit)))/desc">desc</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="krangl.util.MicroBenchmark$elapseNano(krangl.util.MicroBenchmark.T, kotlin.Function0((kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-benchmark-result/index.html"><span class="identifier">BenchmarkResult</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="print-summary.html">printSummary</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">printSummary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

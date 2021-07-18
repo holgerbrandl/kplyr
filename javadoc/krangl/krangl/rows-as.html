@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>rowsAs - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./rows-as.html">rowsAs</a><br/>
+<br/>
+<h1>rowsAs</h1>
+<a name="krangl$rowsAs(krangl.DataFrame, kotlin.collections.Map((kotlin.String, )))"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="keyword">reified</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">rowsAs</span><span class="symbol">(</span><span class="identifier" id="krangl$rowsAs(krangl.DataFrame, kotlin.collections.Map((kotlin.String, )))/mapping">mapping</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;names.map { it to it }.toMap()<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Convert rows into objects by using reflection. Only parameters used in constructor will be mapped.
+Note: This is tested with kotlin data classes only. File a ticket for better type compatibility or any issues!</p>
+<h3>Parameters</h3>
+<p><a name="mapping"></a>
+<code>mapping</code> - parameter mapping scheme to link data frame columns to object properties mapOf("someName" to "lastName", etc.)</p>
+</BODY>
+</HTML>

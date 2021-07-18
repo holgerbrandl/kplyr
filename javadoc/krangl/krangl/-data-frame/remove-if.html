@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataFrame.removeIf - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">DataFrame</a>&nbsp;/&nbsp;<a href="./remove-if.html">removeIf</a><br/>
+<br/>
+<h1>removeIf</h1>
+<a name="krangl.DataFrame$removeIf(kotlin.Function1((krangl.DataCol, kotlin.Boolean)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeIf</span><span class="symbol">(</span><span class="identifier" id="krangl.DataFrame$removeIf(kotlin.Function1((krangl.DataCol, kotlin.Boolean)))/colSelector">colSelector</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../-data-col/index.html"><span class="identifier">DataCol</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Select or remove columns by predicate.</p>
+<pre><code class="lang-kotlin">// data-frames can be a  mix of atomic (int, double, boolean, string) and object columns
+val birthdays = DataFrame.builder("name", "height", "sex", "birthday")(
+        "Tom", 1.89, Sex.MALE, LocalDate.of(1980, 5, 22),
+        "Jane", 1.73, Sex.FEMALE, LocalDate.of(1973, 2, 13)
+)
+
+// just select/deselect columns of interest with varargs
+birthdays.select("name", "height")
+birthdays.remove("sex")
+
+// use helper API to match columns of interest
+birthdays.select { matches("^na") }
+birthdays.select { endsWith("x") }
+
+// do positive and negative selection as needed
+birthdays.remove { startsWith("birth") }
+birthdays.select { except("birth") }
+
+
+// or use stdlib-like filter with `selectIf`
+birthdays.selectIf { it is IntCol }
+birthdays.selectIf { it.name.startsWith("bar") }</code></pre>
+</BODY>
+</HTML>

@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TableContext - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="./index.html">TableContext</a><br/>
+<br/>
+<h1>TableContext</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TableContext</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">TableContext</span><span class="symbol">(</span><span class="identifier" id="krangl.TableContext$<init>(krangl.DataFrame)/df">df</span><span class="symbol">:</span>&nbsp;<a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="df.html">df</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">df</span><span class="symbol">: </span><a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="row-number.html">rowNumber</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rowNumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="krangl.TableContext$get(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-col/index.html"><span class="identifier">DataCol</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-expression-context/index.html">ExpressionContext</a></h4>
+</td>
+<td>
+<p>A proxy on the <code>df</code> that exposes just parts of the DataFrame api that are relevant for table expressions</p>
+<code><span class="keyword">class </span><span class="identifier">ExpressionContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TableContext</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-sorting-context/index.html">SortingContext</a></h4>
+</td>
+<td>
+<p>A proxy on the <code>df</code> that exposes just parts of the DataFrame api that are relevant for sorting</p>
+<code><span class="keyword">class </span><span class="identifier">SortingContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TableContext</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

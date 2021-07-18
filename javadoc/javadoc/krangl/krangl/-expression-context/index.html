@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ExpressionContext - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="./index.html">ExpressionContext</a><br/>
+<br/>
+<h1>ExpressionContext</h1>
+<code><span class="keyword">class </span><span class="identifier">ExpressionContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-table-context/index.html"><span class="identifier">TableContext</span></a></code>
+<p>A proxy on the <code>df</code> that exposes just parts of the DataFrame api that are relevant for table expressions</p>
+<h3>Parameters</h3>
+<p><a name="df"></a>
+<code>df</code> - A <a href="../-data-frame/index.html">krangl.DataFrame</a> instance</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A proxy on the <code>df</code> that exposes just parts of the DataFrame api that are relevant for table expressions</p>
+<code><span class="identifier">ExpressionContext</span><span class="symbol">(</span><span class="identifier" id="krangl.ExpressionContext$<init>(krangl.DataFrame)/df">df</span><span class="symbol">:</span>&nbsp;<a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="nrow.html">nrow</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">nrow</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="where.html">where</a></h4>
+</td>
+<td>
+<p>A numpy equivalent to
+<code>df['color'] = np.where(df['Set']=='Z', 'green', 'red')</code>
+See https://stackoverflow.com/questions/19913659/pandas-conditional-creation-of-a-series-dataframe-column</p>
+<code><span class="keyword">fun </span><span class="identifier">where</span><span class="symbol">(</span><span class="identifier" id="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)/booleans">booleans</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a><span class="symbol">, </span><span class="identifier" id="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)/ifTrue">ifTrue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier" id="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)/ifFalse">ifFalse</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-col/index.html"><span class="identifier">DataCol</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../const.html">const</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ExpressionContext</span></a><span class="symbol">.</span><span class="identifier">const</span><span class="symbol">(</span><span class="identifier" id="krangl$const(krangl.ExpressionContext, kotlin.Any)/someThing">someThing</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-col/index.html"><span class="identifier">DataCol</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../is-n-a.html">isNA</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ExpressionContext</span></a><span class="symbol">.</span><span class="identifier">isNA</span><span class="symbol">(</span><span class="identifier" id="krangl$isNA(krangl.ExpressionContext, kotlin.String)/columnName">columnName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../is-not-n-a.html">isNotNA</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ExpressionContext</span></a><span class="symbol">.</span><span class="identifier">isNotNA</span><span class="symbol">(</span><span class="identifier" id="krangl$isNotNA(krangl.ExpressionContext, kotlin.String)/columnName">columnName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

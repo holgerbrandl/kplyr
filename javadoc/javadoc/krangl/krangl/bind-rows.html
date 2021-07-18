@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>bindRows - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./bind-rows.html">bindRows</a><br/>
+<br/>
+<h1>bindRows</h1>
+<a name="krangl$bindRows(krangl.DataFrame, krangl.DataFrame)"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">bindRows</span><span class="symbol">(</span><span class="identifier" id="krangl$bindRows(krangl.DataFrame, krangl.DataFrame)/df">df</span><span class="symbol">:</span>&nbsp;<a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code><br/>
+<a name="krangl$bindRows(krangl.DataFrame, kotlin.Array((kotlin.collections.Map((kotlin.String, kotlin.Any)))))"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">bindRows</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl$bindRows(krangl.DataFrame, kotlin.Array((kotlin.collections.Map((kotlin.String, kotlin.Any)))))/someRows">someRows</span><span class="symbol">:</span>&nbsp;<a href="-data-frame-row.html"><span class="identifier">DataFrameRow</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code><br/>
+<a name="krangl$bindRows(kotlin.Array((krangl.DataFrame)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">bindRows</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl$bindRows(kotlin.Array((krangl.DataFrame)))/dataFrames">dataFrames</span><span class="symbol">:</span>&nbsp;<a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Adds new rows. Missing entries are set to null. The output of bindRows() will contain a column if that column appears in any of the inputs.</p>
+<p>When row-binding, columns are matched by name, and any missing columns will be filled with NA.</p>
+<p>Grouping will be discarded when binding rows.</p>
+<pre><code class="lang-kotlin">val places = dataFrameOf(
+        "name", "population")(
+        "Fort Joy", 150,
+        "Cloudsdale", 2000
+)
+
+// You can add multiple rows at the same time.
+places.bindRows(
+        mapOf("name" to "Tristram", "population" to 72),
+        mapOf("name" to "Paper Town", "population" to 0)
+)
+
+// Adding incomplete rows inserts nulls
+places.bindRows(mapOf("population" to 10), mapOf("name" to "Paper Town"))
+
+// To drop additional columns originating from the bound rows simply select
+places.bindRows(mapOf("name" to "Bucklyn Cross", "area" to 52.2)).select(places.names)
+
+// Grouping is discarded when adding rows and needs to be reconstituated
+places.groupBy("name")
+        .bindRows(mapOf("population" to 10))
+        // regroup
+        .groupBy("name")</code></pre>
+</BODY>
+</HTML>

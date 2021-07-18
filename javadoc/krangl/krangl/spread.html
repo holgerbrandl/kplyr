@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>spread - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./spread.html">spread</a><br/>
+<br/>
+<h1>spread</h1>
+<a name="krangl$spread(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Any, kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">spread</span><span class="symbol">(</span><span class="identifier" id="krangl$spread(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Any, kotlin.Boolean)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$spread(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Any, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$spread(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Any, kotlin.Boolean)/fill">fill</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="krangl$spread(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Any, kotlin.Boolean)/convert">convert</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Spread a key-value pair across multiple columns.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - The bare (unquoted) name of the column whose values will be used as column headings.</p>
+<p><a name="value"></a>
+<code>value</code> - The bare (unquoted) name of the column whose values will populate the cells.</p>
+<p><a name="fill"></a>
+<code>fill</code> - If set, missing values will be replaced with this value.</p>
+<p><a name="convert"></a>
+<code>convert</code> - If set, attempt to do a type conversion will be run on all new columns. This is useful if the value column
+    was a mix of variables that was coerced to a string.</p>
+</BODY>
+</HTML>

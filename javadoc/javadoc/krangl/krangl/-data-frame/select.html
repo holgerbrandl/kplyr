@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataFrame.select - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">DataFrame</a>&nbsp;/&nbsp;<a href="./select.html">select</a><br/>
+<br/>
+<h1>select</h1>
+<a name="krangl.DataFrame$select(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl.DataFrame$select(kotlin.Array((kotlin.String)))/columns">columns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">DataFrame</span></a></code><br/>
+<a name="krangl.DataFrame$select(kotlin.Array((kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl.DataFrame$select(kotlin.Array((kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))))))/columns">columns</span><span class="symbol">:</span>&nbsp;<a href="../-column-selector.html"><span class="identifier">ColumnSelector</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Create a new data frame with only the selected columns.</p>
+<pre><code class="lang-kotlin">// data-frames can be a  mix of atomic (int, double, boolean, string) and object columns
+val birthdays = DataFrame.builder("name", "height", "sex", "birthday")(
+        "Tom", 1.89, Sex.MALE, LocalDate.of(1980, 5, 22),
+        "Jane", 1.73, Sex.FEMALE, LocalDate.of(1973, 2, 13)
+)
+
+// just select/deselect columns of interest with varargs
+birthdays.select("name", "height")
+birthdays.remove("sex")
+
+// use helper API to match columns of interest
+birthdays.select { matches("^na") }
+birthdays.select { endsWith("x") }
+
+// do positive and negative selection as needed
+birthdays.remove { startsWith("birth") }
+birthdays.select { except("birth") }
+
+
+// or use stdlib-like filter with `selectIf`
+birthdays.selectIf { it is IntCol }
+birthdays.selectIf { it.name.startsWith("bar") }</code></pre><a name="krangl.DataFrame$select(kotlin.collections.Iterable((kotlin.String)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="identifier" id="krangl.DataFrame$select(kotlin.collections.Iterable((kotlin.String)))/columns">columns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Convenience wrapper around to work with varag krangl.DataFrame.select</p>
+<a name="krangl.DataFrame$select(kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="identifier" id="krangl.DataFrame$select(kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))))/columnSelect">columnSelect</span><span class="symbol">:</span>&nbsp;<a href="../-column-selector.html"><span class="identifier">ColumnSelector</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Keeps only the variables that match any of the given expressions.</p>
+<p>E.g. use <code>startsWith("foo")</code> to select for
+columnSelect staring with 'foo'.</p>
+<pre><code class="lang-kotlin">// data-frames can be a  mix of atomic (int, double, boolean, string) and object columns
+val birthdays = DataFrame.builder("name", "height", "sex", "birthday")(
+        "Tom", 1.89, Sex.MALE, LocalDate.of(1980, 5, 22),
+        "Jane", 1.73, Sex.FEMALE, LocalDate.of(1973, 2, 13)
+)
+
+// just select/deselect columns of interest with varargs
+birthdays.select("name", "height")
+birthdays.remove("sex")
+
+// use helper API to match columns of interest
+birthdays.select { matches("^na") }
+birthdays.select { endsWith("x") }
+
+// do positive and negative selection as needed
+birthdays.remove { startsWith("birth") }
+birthdays.select { except("birth") }
+
+
+// or use stdlib-like filter with `selectIf`
+birthdays.selectIf { it is IntCol }
+birthdays.selectIf { it.name.startsWith("bar") }</code></pre>
+</BODY>
+</HTML>

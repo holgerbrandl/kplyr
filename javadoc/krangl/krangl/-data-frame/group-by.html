@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataFrame.groupBy - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">DataFrame</a>&nbsp;/&nbsp;<a href="./group-by.html">groupBy</a><br/>
+<br/>
+<h1>groupBy</h1>
+<a name="krangl.DataFrame$groupBy(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">groupBy</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl.DataFrame$groupBy(kotlin.Array((kotlin.String)))/by">by</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Creates a grouped data-frame given a list of grouping attributes.</p>
+<p>Most data operations are done on groups defined by variables. <code>group_by()</code> takes the receiver data-frame and
+converts it into a grouped data-frame where operations are performed "by group". <code>ungroup()</code> removes grouping.</p>
+<p>Most krangl verbs like <code>addColumn()</code>, <code>summarize()</code>, etc. will be executed per group if a grouping is present.</p>
+<pre><code class="lang-kotlin">// group by a single attribute
+flightsData.groupBy("carrier")
+
+
+// or by multiple attributes
+flightsData.groupBy("carrier", "tailnum")
+
+// or by selecting grouping attriutes with indicator function (same as in `select()`
+flightsData.groupBy { startsWith("dep_") }
+
+// finally we can also group with arbitrary table expressions
+flightsData.groupByExpr { it["dep_time"] eq 22 }
+flightsData.groupByExpr({ it["dep_time"] eq 22 }, { it["carrier"] })</code></pre>
+</BODY>
+</HTML>

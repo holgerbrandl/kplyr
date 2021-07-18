@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>nest - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./nest.html">nest</a><br/>
+<br/>
+<h1>nest</h1>
+<a name="krangl$nest(krangl.DataFrame, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.String)"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">nest</span><span class="symbol">(</span><span class="identifier" id="krangl$nest(krangl.DataFrame, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.String)/colSelect">colSelect</span><span class="symbol">:</span>&nbsp;<a href="-column-selector.html"><span class="identifier">ColumnSelector</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ except(*groupedBy().names.toTypedArray()) }<span class="symbol">, </span><span class="identifier" id="krangl$nest(krangl.DataFrame, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.String)/columnName">columnName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEF_NEST_COLUMN_NAME<span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Nest repeated values in a list-variable.</p>
+<p>There are many possible ways one could choose to nest colSelect inside a data frame. nest() creates a list of data
+frames containing all the nested variables: this seems to be the most useful form in practice.</p>
+<p>Usage</p>
+<pre><code>nest(data, ..., columnName = "data")
+</code></pre>
+<h3>Parameters</h3>
+<p><a name="colSelect"></a>
+<code>colSelect</code> - A selection of colSelect. If not provided, all except the grouping variables are selected. You can
+supply bare variable names, select all variables between x and z with x:z, exclude y with -y. For more options, see the <code>select()</code> documentation.</p>
+<p><a name="columnName"></a>
+<code>columnName</code> - The name of the new column, as a string or symbol.</p>
+</BODY>
+</HTML>

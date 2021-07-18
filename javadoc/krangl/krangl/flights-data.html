@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>flightsData - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./flights-data.html">flightsData</a><br/>
+<br/>
+<h1>flightsData</h1>
+<a name="krangl$flightsData"></a>
+<code><span class="keyword">val </span><span class="identifier">flightsData</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013.</p>
+<ul><li><code>year</code>, <code>month</code>,day: Date of departure</li>
+<li><code>dep_time</code>, <code>arr_time</code>: Actual departure and arrival times, local tz.</li>
+<li><code>sched_dep_time</code>, <code>sched_arr_time</code>: Scheduled departure and arrival times, local tz.</li>
+<li><code>dep_delay</code>, <code>arr_delay</code>: Departure and arrival delays, in minutes. Negative times represent early departures/arrivals.</li>
+<li><code>hour</code>, <code>minute</code>: Time of scheduled departure broken into hour and minutes.</li>
+<li><code>carrier</code>: Two letter carrier abbreviation. See airlines to get name</li>
+<li><code>tailnum</code>: Plane tail number</li>
+<li><code>flight</code>: Flight number</li>
+<li><code>origin</code>,dest: Origin and destination. See airports for additional metadata.</li>
+<li><code>air_time</code>: Amount of time spent in the air, in minutes</li>
+<li><code>distance</code>: Distance between airports, in miles</li>
+<li><code>time_hour</code>: Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.</li>
+</ul>
+<h3>Source</h3>
+<ul><li>RITA, Bureau of transportation statistics, http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236</li>
+<li>https://github.com/hadley/nycflights13</li>
+</ul>
+<p><strong>Getter</strong><br/>
+<p>On-time data for all flights that departed NYC (i.e. JFK, LGA or EWR) in 2013.</p>
+<ul><li><code>year</code>, <code>month</code>,day: Date of departure</li>
+<li><code>dep_time</code>, <code>arr_time</code>: Actual departure and arrival times, local tz.</li>
+<li><code>sched_dep_time</code>, <code>sched_arr_time</code>: Scheduled departure and arrival times, local tz.</li>
+<li><code>dep_delay</code>, <code>arr_delay</code>: Departure and arrival delays, in minutes. Negative times represent early departures/arrivals.</li>
+<li><code>hour</code>, <code>minute</code>: Time of scheduled departure broken into hour and minutes.</li>
+<li><code>carrier</code>: Two letter carrier abbreviation. See airlines to get name</li>
+<li><code>tailnum</code>: Plane tail number</li>
+<li><code>flight</code>: Flight number</li>
+<li><code>origin</code>,dest: Origin and destination. See airports for additional metadata.</li>
+<li><code>air_time</code>: Amount of time spent in the air, in minutes</li>
+<li><code>distance</code>: Distance between airports, in miles</li>
+<li><code>time_hour</code>: Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.</li>
+</ul>
+<h3>Source</h3>
+<ul><li>RITA, Bureau of transportation statistics, http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236</li>
+<li>https://github.com/hadley/nycflights13</li>
+</ul>
+</p>
+</BODY>
+</HTML>

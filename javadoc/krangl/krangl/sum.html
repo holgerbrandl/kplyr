@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>sum - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./sum.html">sum</a><br/>
+<br/>
+<h1>sum</h1>
+<a name="krangl$sum(krangl.DataCol, kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><a href="-data-col/index.html"><span class="identifier">DataCol</span></a><span class="symbol">.</span><span class="identifier">sum</span><span class="symbol">(</span><span class="identifier" id="krangl$sum(krangl.DataCol, kotlin.Boolean)/removeNA">removeNA</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">?</span></code>
+<p>Calculates the arithmetic mean of the column values.</p>
+<h3>Parameters</h3>
+<p><a name="removeNA"></a>
+<code>removeNA</code> - If <code>true</code> missing values will be excluded from the operation</p>
+<h3>Exceptions</h3>
+<p><a name="MissingValueException"></a>
+<code>MissingValueException</code> - If removeNA is <code>false</code> but the data contains missing values.</p>
+<p><a name="InvalidColumnOperationException"></a>
+<code>InvalidColumnOperationException</code> - If the type of the receiver column is not numeric</p>
+</BODY>
+</HTML>

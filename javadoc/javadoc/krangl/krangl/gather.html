@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>gather - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./gather.html">gather</a><br/>
+<br/>
+<h1>gather</h1>
+<a name="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">gather</span><span class="symbol">(</span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/columns">columns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;this.names<span class="symbol">, </span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean)/convert">convert</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Gather takes multiple columns and collapses into key-value pairs, duplicating all other columns as needed. You use
+gather() when you notice that you have columns that are not variables.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - Name of the key column to create in output.</p>
+<p><a name="value"></a>
+<code>value</code> - Name of the value column to create in output.</p>
+<p><a name="columns"></a>
+<code>columns</code> - The colums to gather. The same selectar syntax as for <code>krangl::select</code> is supported here</p>
+<p><a name="convert"></a>
+<code>convert</code> - If TRUE will automatically run <code>convertType</code> on the key column. This is useful if the
+    column names are actually numeric, integer, or logical.</p>
+<a name="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">gather</span><span class="symbol">(</span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.Boolean)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.Boolean)/columns">columns</span><span class="symbol">:</span>&nbsp;<a href="-column-selector.html"><span class="identifier">ColumnSelector</span></a><span class="symbol">, </span><span class="identifier" id="krangl$gather(krangl.DataFrame, kotlin.String, kotlin.String, kotlin.Function1((krangl.ColNames, kotlin.collections.List((kotlin.Boolean)))), kotlin.Boolean)/convert">convert</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+</BODY>
+</HTML>

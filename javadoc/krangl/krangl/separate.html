@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>separate - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./separate.html">separate</a><br/>
+<br/>
+<h1>separate</h1>
+<a name="krangl$separate(krangl.DataFrame, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.Boolean, kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">separate</span><span class="symbol">(</span><span class="identifier" id="krangl$separate(krangl.DataFrame, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.Boolean, kotlin.Boolean)/column">column</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="krangl$separate(krangl.DataFrame, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.Boolean, kotlin.Boolean)/into">into</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="krangl$separate(krangl.DataFrame, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.Boolean, kotlin.Boolean)/sep">sep</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"[^\\w]"<span class="symbol">, </span><span class="identifier" id="krangl$separate(krangl.DataFrame, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.Boolean, kotlin.Boolean)/remove">remove</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="krangl$separate(krangl.DataFrame, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.String, kotlin.Boolean, kotlin.Boolean)/convert">convert</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Given either regular expression or a vector of character positions, separate() turns a single character column into multiple columns.</p>
+<h3>Parameters</h3>
+<p><a name="column"></a>
+<code>column</code> - Bare column name.</p>
+<p><a name="into"></a>
+<code>into</code> - Names of new variables to create as character vector.</p>
+<p><a name="sep"></a>
+<code>sep</code> - Separator between columns. If character, is interpreted as a regular expression. The default value is a regular @param expression that matches any sequence of non-alphanumeric values.</p>
+<p><a name="remove"></a>
+<code>remove</code> - If TRUE, remove input column from output data frame.</p>
+<p><a name="convert"></a>
+<code>convert</code> - If set, attempt to do a type conversion will be run on all new columns. This                  is useful if the value column was a mix of variables that was coerced to a string.</p>
+</BODY>
+</HTML>

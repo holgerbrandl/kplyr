@@ -1,0 +1,34 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:krangl$=(kotlin.String, kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))krangl/kotlin.-string/=.html
+$dokka.location:krangl$AND(kotlin.BooleanArray, kotlin.BooleanArray)krangl/kotlin.-boolean-array/-a-n-d.html
+$dokka.location:krangl$AND(kotlin.collections.List((kotlin.Boolean)), kotlin.collections.List((kotlin.Boolean)))krangl/kotlin.collections.-list/-a-n-d.html
+$dokka.location:krangl$OR(kotlin.BooleanArray, kotlin.BooleanArray)krangl/kotlin.-boolean-array/-o-r.html
+$dokka.location:krangl$OR(kotlin.collections.List((kotlin.Boolean)), kotlin.collections.List((kotlin.Boolean)))krangl/kotlin.collections.-list/-o-r.html
+$dokka.location:krangl$XOR(kotlin.collections.List((kotlin.Boolean)), kotlin.collections.List((kotlin.Boolean)))krangl/kotlin.collections.-list/-x-o-r.html
+$dokka.location:krangl$asDataFrame(kotlin.collections.Iterable((krangl.asDataFrame.T)), kotlin.String)krangl/kotlin.collections.-iterable/as-data-frame.html
+$dokka.location:krangl$asDf(kotlin.collections.List((krangl.ColSpec)))krangl/kotlin.collections.-list/as-df.html
+$dokka.location:krangl$bindCols(kotlin.collections.Iterable((krangl.DataCol)))krangl/kotlin.collections.-iterable/bind-cols.html
+$dokka.location:krangl$bindRows(kotlin.collections.List((krangl.DataFrame)))krangl/kotlin.collections.-list/bind-rows.html
+$dokka.location:krangl$concat(kotlin.collections.List((kotlin.Any)), kotlin.collections.List((kotlin.Any)))krangl/kotlin.collections.-list/concat.html
+$dokka.location:krangl$cumSum(kotlin.collections.List((krangl.cumSum.T)))krangl/kotlin.collections.-list/cum-sum.html
+$dokka.location:krangl$deparseRecords(kotlin.collections.Iterable((krangl.deparseRecords.T)), kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Function2((krangl.deparseRecords.T, , kotlin.Any)))))))krangl/kotlin.collections.-iterable/deparse-records.html
+$dokka.location:krangl$deparseRecords(kotlin.collections.Iterable((krangl.deparseRecords.T)), kotlin.Function1((krangl.deparseRecords.T, kotlin.collections.Map((kotlin.String, kotlin.Any)))))krangl/kotlin.collections.-iterable/deparse-records.html
+$dokka.location:krangl$mapNonNull(kotlin.Array((krangl.mapNonNull.T)), kotlin.Function1((krangl.mapNonNull.T, krangl.mapNonNull.R)))krangl/kotlin.-array/map-non-null.html
+$dokka.location:krangl$mean(kotlin.Array((kotlin.Double)))krangl/kotlin.-array/mean.html
+$dokka.location:krangl$mean(kotlin.collections.List((kotlin.Double)))krangl/kotlin.collections.-list/mean.html
+$dokka.location:krangl$median(kotlin.Array((kotlin.Double)))krangl/kotlin.-array/median.html
+$dokka.location:krangl$not(kotlin.BooleanArray)krangl/kotlin.-boolean-array/not.html
+$dokka.location:krangl$not(kotlin.collections.List((kotlin.Boolean)))krangl/kotlin.collections.-list/not.html
+$dokka.location:krangl$print(kotlin.collections.List((krangl.ColSpec)))krangl/kotlin.collections.-list/print.html
+$dokka.location:krangl$sd(kotlin.Array((kotlin.Double)))krangl/kotlin.-array/sd.html
+$dokka.location:krangl$to(kotlin.String, kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))krangl/kotlin.-string/to.html
+$dokka.location:krangl$with(kotlin.String, kotlin.Function2((krangl.with.T, , kotlin.Any)))krangl/kotlin.-string/with.html
+$dokka.location:krangl.util$asDF(kotlin.collections.List((krangl.DataCol)))krangl.util/kotlin.collections.-list/as-d-f.html
+$dokka.location:krangl.util$foldUntil(kotlin.sequences.Sequence((krangl.util.foldUntil.T)), krangl.util.foldUntil.R, kotlin.Function2((krangl.util.foldUntil.R, krangl.util.foldUntil.T, )), kotlin.Function1((krangl.util.foldUntil.R, kotlin.Boolean)))krangl.util/kotlin.sequences.-sequence/fold-until.html
+$dokka.location:krangl.util$foldWhile(kotlin.sequences.Sequence((krangl.util.foldWhile.T)), krangl.util.foldWhile.R, kotlin.Function2((krangl.util.foldWhile.R, krangl.util.foldWhile.T, )), kotlin.Function1((krangl.util.foldWhile.R, kotlin.Boolean)))krangl.util/kotlin.sequences.-sequence/fold-while.html
+$dokka.location:krangl.util$reduceUntil(kotlin.sequences.Sequence((krangl.util.reduceUntil.T)), kotlin.Function2((krangl.util.reduceUntil.R, krangl.util.reduceUntil.T, krangl.util.reduceUntil.R)), kotlin.Function1((krangl.util.reduceUntil.R, kotlin.Boolean)))krangl.util/kotlin.sequences.-sequence/reduce-until.html
+$dokka.location:krangl.util$scanLeft(kotlin.sequences.Sequence((krangl.util.scanLeft.T)), krangl.util.scanLeft.R, kotlin.Function2((krangl.util.scanLeft.R, krangl.util.scanLeft.T, )))krangl.util/kotlin.sequences.-sequence/scan-left.html
+krangl
+krangl.experimental
+krangl.util

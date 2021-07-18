@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>isMatching - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./is-matching.html">isMatching</a><br/>
+<br/>
+<h1>isMatching</h1>
+<a name="krangl$isMatching(krangl.DataCol, kotlin.Boolean, kotlin.Function1((krangl.isMatching.T, kotlin.Boolean)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="keyword">reified</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-data-col/index.html"><span class="identifier">DataCol</span></a><span class="symbol">.</span><span class="identifier">isMatching</span><span class="symbol">(</span><span class="identifier" id="krangl$isMatching(krangl.DataCol, kotlin.Boolean, kotlin.Function1((krangl.isMatching.T, kotlin.Boolean)))/missingAs">missingAs</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="keyword">crossinline</span> <span class="identifier" id="krangl$isMatching(krangl.DataCol, kotlin.Boolean, kotlin.Function1((krangl.isMatching.T, kotlin.Boolean)))/filter">filter</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a></code>
+<p>Match a text column in a NA-aware manner to create a predicate vector for filtering.</p>
+<pre><code class="lang-kotlin">irisData
+        // filter for all record where species starts with "se"
+        .filter { it["Species"].isMatching&lt;String&gt; { startsWith("se") } }
+        .schema()</code></pre>
+</BODY>
+</HTML>

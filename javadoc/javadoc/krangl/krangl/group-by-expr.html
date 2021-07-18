@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>groupByExpr - krangl</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">krangl</a>&nbsp;/&nbsp;<a href="./group-by-expr.html">groupByExpr</a><br/>
+<br/>
+<h1>groupByExpr</h1>
+<a name="krangl$groupByExpr(krangl.DataFrame, kotlin.Array((kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))), kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))"></a>
+<code><span class="keyword">fun </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a><span class="symbol">.</span><span class="identifier">groupByExpr</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl$groupByExpr(krangl.DataFrame, kotlin.Array((kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))), kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))/moreExpressions">moreExpressions</span><span class="symbol">:</span>&nbsp;<a href="-table-expression.html"><span class="identifier">TableExpression</span></a><span class="symbol">, </span><span class="identifier" id="krangl$groupByExpr(krangl.DataFrame, kotlin.Array((kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))), kotlin.Function2((krangl.ExpressionContext, , kotlin.Any)))/tableExpression">tableExpression</span><span class="symbol">:</span>&nbsp;<a href="-table-expression.html"><span class="identifier">TableExpression</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="-data-frame/index.html"><span class="identifier">DataFrame</span></a></code>
+<p>Creates a grouped data-frame from one or more table expressions. See <code>addColumn()</code> for details about table expressions.</p>
+<p>Most data operations are done on groups defined by variables. <code>group_by()</code> takes the receiver data-frame and
+converts it into a grouped data-frame where operations are performed "by group". <code>ungroup()</code> removes grouping.</p>
+<p>Most krangl verbs like <code>addColumn()</code>, <code>summarize()</code>, etc. will be executed per group if a grouping is present.</p>
+<pre><code class="lang-kotlin">// group by a single attribute
+flightsData.groupBy("carrier")
+
+
+// or by multiple attributes
+flightsData.groupBy("carrier", "tailnum")
+
+// or by selecting grouping attriutes with indicator function (same as in `select()`
+flightsData.groupBy { startsWith("dep_") }
+
+// finally we can also group with arbitrary table expressions
+flightsData.groupByExpr { it["dep_time"] eq 22 }
+flightsData.groupByExpr({ it["dep_time"] eq 22 }, { it["carrier"] })</code></pre>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ExpressionContext.where - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">ExpressionContext</a>&nbsp;/&nbsp;<a href="./where.html">where</a><br/>
+<br/>
+<h1>where</h1>
+<a name="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)"></a>
+<code><span class="keyword">fun </span><span class="identifier">where</span><span class="symbol">(</span><span class="identifier" id="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)/booleans">booleans</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a><span class="symbol">, </span><span class="identifier" id="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)/ifTrue">ifTrue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier" id="krangl.ExpressionContext$where(kotlin.BooleanArray, kotlin.Any, kotlin.Any)/ifFalse">ifFalse</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-col/index.html"><span class="identifier">DataCol</span></a></code>
+<p>A numpy equivalent to
+<code>df['color'] = np.where(df['Set']=='Z', 'green', 'red')</code>
+See https://stackoverflow.com/questions/19913659/pandas-conditional-creation-of-a-series-dataframe-column</p>
+<p>In R the corresoponding pattern would be mutate(df, foo=if_else())</p>
+<pre><code class="lang-kotlin">flightsData.addColumn("delay_category") { df -&gt;
+    where(df["dep_delay"].toDoubles().mapNonNull { Math.abs(it) &gt; 3 }.nullAsFalse(), "red", "green")
+}</code></pre>
+</BODY>
+</HTML>

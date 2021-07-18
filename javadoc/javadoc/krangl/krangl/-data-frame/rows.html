@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataFrame.rows - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="index.html">DataFrame</a>&nbsp;/&nbsp;<a href="./rows.html">rows</a><br/>
+<br/>
+<h1>rows</h1>
+<a name="krangl.DataFrame$rows"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">rows</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="../-data-frame-row.html"><span class="identifier">DataFrameRow</span></a><span class="symbol">&gt;</span></code>
+<p><strong>Return</strong><br/>
+<p>An iterator over all rows. Per row data is represented as a named map.</p>
+
+
+<p>Example:</p>
+
+
+<pre><code>df.rows.map { row -&gt; SumDF(row["age"] as Int, row["mean_weight"] as Double, row["num_persons"] as Int) }
+</code></pre></p>
+</BODY>
+</HTML>

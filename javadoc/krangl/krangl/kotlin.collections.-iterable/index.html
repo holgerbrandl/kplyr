@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>krangl.kotlin.collections.Iterable - krangl</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">krangl</a>&nbsp;/&nbsp;<a href="../index.html">krangl</a>&nbsp;/&nbsp;<a href="./index.html">kotlin.collections.Iterable</a><br/>
+<br/>
+<h3>Extensions for kotlin.collections.Iterable</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="as-data-frame.html">asDataFrame</a></h4>
+</td>
+<td>
+<p>Turn a list of objects into a data-frame using reflection. Currently just properties without any nesting are supported.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">asDataFrame</span><span class="symbol">(</span><span class="identifier" id="krangl$asDataFrame(kotlin.collections.Iterable((krangl.asDataFrame.T)), kotlin.String)/refAs">refAs</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="bind-cols.html">bindCols</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="../-data-col/index.html"><span class="identifier">DataCol</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">bindCols</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="deparse-records.html">deparseRecords</a></h4>
+</td>
+<td>
+<p>Create a data-frame from a list of objects</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">deparseRecords</span><span class="symbol">(</span><span class="identifier" id="krangl$deparseRecords(kotlin.collections.Iterable((krangl.deparseRecords.T)), kotlin.Function1((krangl.deparseRecords.T, kotlin.collections.Map((kotlin.String, kotlin.Any)))))/mapping">mapping</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">T</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../-data-frame-row.html"><span class="identifier">DataFrameRow</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a></code><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">deparseRecords</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="krangl$deparseRecords(kotlin.collections.Iterable((krangl.deparseRecords.T)), kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Function2((krangl.deparseRecords.T, , kotlin.Any)))))))/mapping">mapping</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">DeparseFormula</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-data-frame/index.html"><span class="identifier">DataFrame</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
